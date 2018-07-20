@@ -1,4 +1,6 @@
 var expres=require("express");
+var midleware=require("./midleware");
+
 var app=expres();
 var PORT=3000;
 /*
@@ -6,16 +8,6 @@ app.get("/",function(req,res){
     res.send("Selamun aleyküm");
 })
 */
-var midleware={
-    requireAuthentication:function(req,res,next){
-        console.log("özel root girildi");
-        next();
-    },
-    logger:function(req,res,next){
-        console.log(req.method+" "+req.originalUrl);
-        next();
-    }
-}
 
 //app.use(midleware.requireAuthentication);
 

@@ -1,4 +1,4 @@
-module.exports={
+var midleware={
     requireAuthentication:function(req,res,next){
         console.log("özel root girildi");
         next();
@@ -8,3 +8,4 @@ module.exports={
         next();
     }
 }
+module.exports=midleware;
