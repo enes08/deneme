@@ -2,7 +2,7 @@ var expres=require("express");
 var midleware=require("./midleware");
 
 var app=expres();
-var PORT=3000;
+var PORT=process.env.PORT || 3000;
 /*
 app.get("/",function(req,res){
     res.send("Selamun aleyküm");
